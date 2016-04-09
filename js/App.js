@@ -100,7 +100,8 @@ sortArrayByKey(arr, key, sorted){
       }
 
       self.setState({
-        data: sortArr
+        data: sortArr,
+        active: sortArr[0]
       })
 
     })
@@ -109,7 +110,8 @@ sortArrayByKey(arr, key, sorted){
       event.preventDefault();
       var sortArr = self.sortArrayByKey(self.state.data, "age", sortedAge);
       self.setState({
-        data: sortArr
+        data: sortArr,
+        active: sortArr[0]
       })
 
       if (sortedAge) {
