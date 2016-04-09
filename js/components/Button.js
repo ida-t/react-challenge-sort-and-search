@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React , { Component } from 'react';
 
-const Button = ({count, update}) => {
-  return (
-    <button className="btn btn-default" onClick={update}>
-      Кнопка была нажата {count} раз
-    </button>
-  );
+export default class Button extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <button className="btn btn-default sort-button" id = {this.props.id}>
+          <i className={'icon fa ' + this.props.faIconClassName} ></i>
+          <span>{this.props.name}</span>
+      </button>
+    )
+  }
+
 }
-
-
-export default Button;
